@@ -15,9 +15,21 @@ mongoose.connect("mongodb+srv://leidykga:39715718Ll@clusterc4w.yrdqm.mongodb.net
 
 //Operaciones crud
 
-router.get('/', (req, res) => {
+router.get('/', (req, res) =>{
     res.send("Este es el inicio de mi primer API")
 });
+
+//Consultar todos
+router.get('/Usuario', (req , res) =>{
+    UsuarioSchema.find(function(err, datos){
+        if(err){
+            console.log("Error leyendo los usuarios");
+        }else{
+            res.send(datos);
+        }
+    })
+})
+
 
 //Insertar
 router.post('/Usuario', (req, res) =>{
