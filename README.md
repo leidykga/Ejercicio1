@@ -12,3 +12,6 @@ Crear un nuevo archivo
 
 instalar paquetes 
    npm install express
+
+compilar para verificar funcionalidad
+   node server.js
